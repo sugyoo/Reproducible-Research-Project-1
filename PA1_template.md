@@ -22,6 +22,8 @@ stepsByDay <- tapply(activityData$steps, activityData$date, sum, na.rm=TRUE)
 qplot(stepsByDay, xlab='Total steps per day', ylab='Frequency using binwith 500', binwidth=500)
 ```
 
+![gras](https://github.com/sugyoo/Reproducible-Research-Project-1/blob/master/%232.png)
+
 ## 3. Mean and median number of steps taken each day
 ```{r}
 stepsByDayMean <- mean(stepsByDay)
@@ -50,6 +52,8 @@ timeMostSteps <-  gsub("([0-9]{1,2})([0-9]{2})", "\\1:\\2", averageStepsPerTimeB
 * Most Steps at: `r timeMostSteps`
 
 ----
+
+![gras](https://github.com/sugyoo/Reproducible-Research-Project-1/blob/master/%235.png)
 
 ## 6. Code to describe and show a strategy for imputing missing data
 
@@ -82,6 +86,8 @@ stepsByDayMedianImputed <- median(stepsByDayImputed)
 
 ----
 
+![gras](https://github.com/sugyoo/Reproducible-Research-Project-1/blob/master/%237.png)
+
 ## 8. Panel plot comparing the average number of steps taken per 5-minute interval across weekdays and weekends
 
 ```{r}
@@ -94,3 +100,5 @@ ggplot(averagedActivityDataImputed, aes(interval, steps)) +
     ylab("avarage number of steps")
 ```
 
+
+![gras](https://github.com/sugyoo/Reproducible-Research-Project-1/blob/master/%238.png)
